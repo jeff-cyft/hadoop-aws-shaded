@@ -32,10 +32,10 @@ libraryDependencies ++= Seq(
 )
 
 assemblyShadeRules in assembly := Seq(
-  ShadeRule.rename("com.amazonaws.**" -> "shaded.@1").inAll,
-  ShadeRule.rename("javax.servlet.**" -> "shaded.@1").inAll,
-  ShadeRule.rename("com.fasterxml.**" -> "shaded.@1").inAll,
-  ShadeRule.rename("org.apache.http.**" -> "shaded.@1").inAll
+  ShadeRule.rename("com.amazonaws.**" -> "shaded.com.amazonaws.@1").inAll,
+  ShadeRule.rename("javax.servlet.**" -> "shaded.javax.servlet.@1").inAll,
+  ShadeRule.rename("com.fasterxml.**" -> "shaded.com.fasterxml.@1").inAll,
+  ShadeRule.rename("org.apache.http.**" -> "shaded.org.apache.http.@1").inAll
 )
 
 artifact in (Compile, assembly) := {
